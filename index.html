@@ -26,100 +26,138 @@
         .container {
             background: #161b22;
             border: 1px solid #30363d;
-            border-radius: 12px;
-            padding: 40px;
+            border-radius: 20px;
+            padding: 40px 30px;
             max-width: 500px;
             width: 100%;
             text-align: center;
         }
 
         .logo {
-            margin-bottom: 30px;
-            padding-bottom: 20px;
+            margin-bottom: 35px;
+            padding-bottom: 25px;
             border-bottom: 1px solid #30363d;
         }
 
         .logo h1 {
             color: #f0f6fc;
-            font-size: 2.5em;
+            font-size: 2.8em;
             font-weight: 700;
             letter-spacing: 1px;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
         .logo p {
             color: #8b949e;
-            font-size: 1.1em;
+            font-size: 1.2em;
         }
 
         .links-container {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 16px;
         }
 
         .link-item {
             background: #21262d;
-            padding: 16px 20px;
-            border-radius: 8px;
+            padding: 20px 25px;
+            border-radius: 16px;
             text-decoration: none;
             color: #c9d1d9;
             display: flex;
             align-items: center;
-            gap: 15px;
-            transition: all 0.2s ease;
+            gap: 20px;
+            transition: all 0.3s ease;
             border: 1px solid #30363d;
         }
 
         .link-item:hover {
             background: #30363d;
-            border-color: #8b949e;
-            transform: translateY(-1px);
+            border-color: #58a6ff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(88, 166, 255, 0.1);
         }
 
         .link-icon {
-            font-size: 1.3em;
-            width: 30px;
+            font-size: 1.8em;
+            width: 40px;
             text-align: center;
-            color: #58a6ff;
+            transition: transform 0.3s ease;
+        }
+
+        .link-item:hover .link-icon {
+            transform: scale(1.1);
         }
 
         .link-text {
             flex: 1;
             text-align: left;
-            font-weight: 500;
-            font-size: 0.95em;
+            font-weight: 600;
+            font-size: 1.1em;
         }
 
         .link-arrow {
-            color: #8b949e;
-            font-size: 0.9em;
+            color: #58a6ff;
+            font-size: 1.2em;
             opacity: 0;
-            transition: opacity 0.2s ease;
+            transition: all 0.3s ease;
         }
 
         .link-item:hover .link-arrow {
             opacity: 1;
+            transform: translateX(3px);
         }
 
-        /* GitHub-style colors for different platforms */
-        .link-item:nth-child(1) .link-icon { color: #f0f6fc; } /* GitHub - białe */
-        .link-item:nth-child(2) .link-icon { color: #5865f2; } /* Discord */
-        .link-item:nth-child(3) .link-icon { color: #e1306c; } /* Instagram */
-        .link-item:nth-child(4) .link-icon { color: #ff0000; } /* YouTube */
-        .link-item:nth-child(5) .link-icon { color: #58a6ff; } /* Website */
+        /* Kolory ikon */
+        .fa-facebook { color: #1877f2; }
+        .fa-instagram { color: #e4405f; }
+        .fa-github { color: #f0f6fc; }
+        .fa-discord { color: #5865f2; }
 
         @media (max-width: 480px) {
             .container {
-                padding: 30px 20px;
+                padding: 35px 25px;
+                border-radius: 24px;
+                margin: 10px;
             }
             
             .logo h1 {
-                font-size: 2em;
+                font-size: 2.4em;
+            }
+            
+            .logo p {
+                font-size: 1.1em;
             }
             
             .link-item {
-                padding: 14px 16px;
+                padding: 22px 20px;
+                border-radius: 18px;
+                gap: 18px;
+            }
+            
+            .link-icon {
+                font-size: 1.7em;
+                width: 35px;
+            }
+            
+            .link-text {
+                font-size: 1.05em;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .container {
+                padding: 30px 20px;
+                border-radius: 20px;
+            }
+            
+            .link-item {
+                padding: 18px 16px;
+                border-radius: 14px;
+            }
+            
+            .link-icon {
+                font-size: 1.5em;
             }
         }
     </style>
@@ -132,24 +170,15 @@
         </div>
         
         <div class="links-container">
-            <!-- TUTAJ DODAJESZ SWOJE LINKI -->
-            <a href="#" class="link-item">
+            <a href="https://www.facebook.com/share/17aXuZf8b3/?mibextid=wwXIfr" class="link-item">
                 <div class="link-icon">
-                    <i class="fab fa-github"></i>
+                    <i class="fab fa-facebook"></i>
                 </div>
-                <div class="link-text">GitHub</div>
+                <div class="link-text">Facebook</div>
                 <div class="link-arrow">→</div>
             </a>
 
-            <a href="#" class="link-item">
-                <div class="link-icon">
-                    <i class="fab fa-discord"></i>
-                </div>
-                <div class="link-text">Discord</div>
-                <div class="link-arrow">→</div>
-            </a>
-
-            <a href="#" class="link-item">
+            <a href="https://www.instagram.com/exolyte.studios?igsh=MWZ1cmJoZDE1Mng3ZA%3D%3D&utm_source=qr" class="link-item">
                 <div class="link-icon">
                     <i class="fab fa-instagram"></i>
                 </div>
@@ -157,19 +186,19 @@
                 <div class="link-arrow">→</div>
             </a>
 
-            <a href="#" class="link-item">
+            <a href="https://github.com/FryZe10D/Exolyte---twoja-wymarzona-strona-WWW" class="link-item">
                 <div class="link-icon">
-                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-github"></i>
                 </div>
-                <div class="link-text">YouTube</div>
+                <div class="link-text">GitHub</div>
                 <div class="link-arrow">→</div>
             </a>
 
-            <a href="#" class="link-item">
+            <a href="https://discord.gg/JNp4Fzykvx" class="link-item">
                 <div class="link-icon">
-                    <i class="fas fa-globe"></i>
+                    <i class="fab fa-discord"></i>
                 </div>
-                <div class="link-text">Strona Główna</div>
+                <div class="link-text">Discord</div>
                 <div class="link-arrow">→</div>
             </a>
         </div>
