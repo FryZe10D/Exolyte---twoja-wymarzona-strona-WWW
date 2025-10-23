@@ -10,23 +10,24 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
 
         body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #0d1117;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
+            color: #c9d1d9;
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
             padding: 40px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
             max-width: 500px;
             width: 100%;
             text-align: center;
@@ -34,64 +35,79 @@
 
         .logo {
             margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #30363d;
         }
 
         .logo h1 {
-            color: #333;
+            color: #f0f6fc;
             font-size: 2.5em;
             font-weight: 700;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
         }
 
         .logo p {
-            color: #666;
-            margin-top: 10px;
+            color: #8b949e;
             font-size: 1.1em;
         }
 
         .links-container {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
         }
 
         .link-item {
-            background: white;
-            padding: 18px 25px;
-            border-radius: 12px;
+            background: #21262d;
+            padding: 16px 20px;
+            border-radius: 8px;
             text-decoration: none;
-            color: #333;
+            color: #c9d1d9;
             display: flex;
             align-items: center;
             gap: 15px;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.2s ease;
+            border: 1px solid #30363d;
         }
 
         .link-item:hover {
-            transform: translateY(-3px);
-            border-color: #667eea;
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+            background: #30363d;
+            border-color: #8b949e;
+            transform: translateY(-1px);
         }
 
         .link-icon {
-            font-size: 1.4em;
+            font-size: 1.3em;
             width: 30px;
             text-align: center;
-            color: #667eea;
+            color: #58a6ff;
         }
 
         .link-text {
             flex: 1;
             text-align: left;
-            font-weight: 600;
+            font-weight: 500;
+            font-size: 0.95em;
         }
 
         .link-arrow {
-            color: #999;
+            color: #8b949e;
             font-size: 0.9em;
+            opacity: 0;
+            transition: opacity 0.2s ease;
         }
+
+        .link-item:hover .link-arrow {
+            opacity: 1;
+        }
+
+        /* GitHub-style colors for different platforms */
+        .link-item:nth-child(1) .link-icon { color: #f0f6fc; } /* GitHub - białe */
+        .link-item:nth-child(2) .link-icon { color: #5865f2; } /* Discord */
+        .link-item:nth-child(3) .link-icon { color: #e1306c; } /* Instagram */
+        .link-item:nth-child(4) .link-icon { color: #ff0000; } /* YouTube */
+        .link-item:nth-child(5) .link-icon { color: #58a6ff; } /* Website */
 
         @media (max-width: 480px) {
             .container {
@@ -100,6 +116,10 @@
             
             .logo h1 {
                 font-size: 2em;
+            }
+            
+            .link-item {
+                padding: 14px 16px;
             }
         }
     </style>
@@ -113,7 +133,6 @@
         
         <div class="links-container">
             <!-- TUTAJ DODAJESZ SWOJE LINKI -->
-            <!-- Przykładowe linki - zmień href i tekst -->
             <a href="#" class="link-item">
                 <div class="link-icon">
                     <i class="fab fa-github"></i>
