@@ -1,1 +1,159 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exolyte</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .logo {
+            margin-bottom: 30px;
+        }
+
+        .logo h1 {
+            color: #333;
+            font-size: 2.5em;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .logo p {
+            color: #666;
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-item {
+            background: white;
+            padding: 18px 25px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .link-item:hover {
+            transform: translateY(-3px);
+            border-color: #667eea;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+        }
+
+        .link-icon {
+            font-size: 1.4em;
+            width: 30px;
+            text-align: center;
+            color: #667eea;
+        }
+
+        .link-text {
+            flex: 1;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .link-arrow {
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            .logo h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>EXOLYTE</h1>
+            <p>Connect with us</p>
+        </div>
+        
+        <div class="links-container">
+            <!-- TUTAJ DODAJESZ SWOJE LINKI -->
+            <!-- Przykładowe linki - zmień href i tekst -->
+            <a href="#" class="link-item">
+                <div class="link-icon">
+                    <i class="fab fa-github"></i>
+                </div>
+                <div class="link-text">GitHub</div>
+                <div class="link-arrow">→</div>
+            </a>
+
+            <a href="#" class="link-item">
+                <div class="link-icon">
+                    <i class="fab fa-discord"></i>
+                </div>
+                <div class="link-text">Discord</div>
+                <div class="link-arrow">→</div>
+            </a>
+
+            <a href="#" class="link-item">
+                <div class="link-icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <div class="link-text">Instagram</div>
+                <div class="link-arrow">→</div>
+            </a>
+
+            <a href="#" class="link-item">
+                <div class="link-icon">
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <div class="link-text">YouTube</div>
+                <div class="link-arrow">→</div>
+            </a>
+
+            <a href="#" class="link-item">
+                <div class="link-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="link-text">Strona Główna</div>
+                <div class="link-arrow">→</div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
